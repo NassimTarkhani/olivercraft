@@ -56,7 +56,9 @@ export function ContactSection() {
               <div className="flex items-start">
                 <Mail size={24} className="mr-4 mt-1" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+                  <h3 className="text-xl font-semibold mb-2 font-didot">
+                    Email Us
+                  </h3>
                   <p className="text-gray-600">contact@OLIVER CRAFT.com</p>
                 </div>
               </div>

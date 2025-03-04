@@ -80,7 +80,7 @@ export function ExpertiseSection() {
       {/* Content Overlay */}
       <div className="relative z-10 bg-white/30 backdrop-blur-md py-16 px-4 md:px-6">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-16 text-center font-didot">
             Our Expertise
           </h2>
 
