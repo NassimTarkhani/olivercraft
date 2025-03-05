@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
+import { ArrowRight } from "lucide-react"; // Import ArrowRight icon
 import { cn } from "@/lib/utils";
 
 const expertiseAreas = [
@@ -17,6 +17,8 @@ const expertiseAreas = [
       "KPI Definition",
       "Digital Roadmap",
     ],
+    backgroundImage:
+      "https://images.unsplash.com/flagged/photo-1570733117311-d990c3816c47?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
@@ -30,6 +32,8 @@ const expertiseAreas = [
       "Tone of Voice",
       "Visual Language",
     ],
+    backgroundImage:
+      "https://plus.unsplash.com/premium_photo-1695575593603-1f42ca27bb6d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 3,
@@ -43,6 +47,8 @@ const expertiseAreas = [
       "Mobile Apps",
       "Performance Optimization",
     ],
+    backgroundImage:
+      "https://images.unsplash.com/photo-1603189343302-e603f7add05a?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 4,
@@ -56,14 +62,30 @@ const expertiseAreas = [
       "Paid Media",
       "Performance Analytics",
     ],
+    backgroundImage:
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
 export function ExpertiseSection() {
   const [expandedItem, setExpandedItem] = useState<number | null>(null);
+  const [backgroundImage, setBackgroundImage] = useState<string>(
+    expertiseAreas[0].backgroundImage
+  );
 
   const toggleItem = (id: number) => {
-    setExpandedItem(expandedItem === id ? null : id);
+    if (expandedItem === id) {
+      // If the same item is clicked again, close it and reset the background image
+      setExpandedItem(null);
+      setBackgroundImage(expertiseAreas[0].backgroundImage); // Reset to default image
+    } else {
+      // Open the clicked item and update the background image
+      setExpandedItem(id);
+      const selectedArea = expertiseAreas.find((area) => area.id === id);
+      if (selectedArea) {
+        setBackgroundImage(selectedArea.backgroundImage);
+      }
+    }
   };
 
   return (
@@ -72,8 +94,7 @@ export function ExpertiseSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/flagged/photo-1570733117311-d990c3816c47?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+          backgroundImage: `url('${backgroundImage}')`,
         }}
       />
 
@@ -94,20 +115,18 @@ export function ExpertiseSection() {
                   <h3 className="text-xl md:text-2xl font-medium">
                     {area.title}
                   </h3>
-                  <span>
-                    {expandedItem === area.id ? (
-                      <Minus size={24} />
-                    ) : (
-                      <Plus size={24} />
+                  <span
+                    className={cn(
+                      "transition-transform duration-300",
+                      expandedItem === area.id ? "rotate-90" : "rotate-0"
                     )}
+                  >
+                    <ArrowRight size={24} /> {/* Use ArrowRight icon */}
                   </span>
                 </button>
                 <div
                   className={cn(
-                    "overflow-hidden transition-all duration-300",
-                    expandedItem === area.id
-                      ? "max-h-[500px] opacity-100"
-                      : "max-h-0 opacity-0"
+                    expandedItem === area.id ? "block" : "hidden" // Remove animation
                   )}
                 >
                   <div className="p-6 bg-white/90">
