@@ -1,43 +1,51 @@
-"use client"
+"use client";
 
-import { useState } from 'react'
-import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { useState } from "react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const projects = [
   {
     id: 1,
     title: "Luxury Fashion Brand",
     category: "E-commerce",
-    image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-    description: "Complete digital transformation for a luxury fashion house, including e-commerce platform and digital marketing strategy."
+    image:
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    description:
+      "Complete digital transformation for a luxury fashion house, including e-commerce platform and digital marketing strategy.",
   },
   {
     id: 2,
     title: "Premium Automotive",
     category: "Brand Experience",
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    description: "Immersive digital experience for a premium automotive brand, showcasing their latest models and technologies."
+    image:
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    description:
+      "Immersive digital experience for a premium automotive brand, showcasing their latest models and technologies.",
   },
   {
     id: 3,
     title: "Fine Jewelry",
     category: "Digital Campaign",
-    image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    description: "Award-winning digital campaign for a fine jewelry brand, resulting in significant brand awareness and sales growth."
+    image:
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    description:
+      "Award-winning digital campaign for a fine jewelry brand, resulting in significant brand awareness and sales growth.",
   },
   {
     id: 4,
     title: "Hospitality Group",
     category: "Website Redesign",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    description: "Complete website redesign for a luxury hospitality group, focusing on user experience and conversion optimization."
-  }
-]
+    image:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    description:
+      "Complete website redesign for a luxury hospitality group, focusing on user experience and conversion optimization.",
+  },
+];
 
 export function WorkSection() {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null)
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   return (
     <section id="work" className="py-20 md:py-32 bg-white">
@@ -46,14 +54,15 @@ export function WorkSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-0">
             Selected Work
           </h2>
-          <p className="text-lg md:text-xl max-w-md text-gray-600">
-            We create digital experiences that elevate luxury and premium brands to new heights.
+          <p className="text-lg md:text-3xl max-w-md text-gray-600 font-didot">
+            WE CREATE DIGITAL EXPERIENCES THAT ELEVATE LUXURY AND PREMIUM BRANDS
+            TO NEW HEIGHTS.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {projects.map((project) => (
-            <div 
+            <div
               key={project.id}
               className="group cursor-pointer"
               onMouseEnter={() => setHoveredProject(project.id)}
@@ -73,13 +82,19 @@ export function WorkSection() {
               </div>
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-semibold mb-2">{project.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold mb-2">
+                    {project.title}
+                  </h3>
                   <p className="text-gray-600">{project.category}</p>
                 </div>
-                <div className={cn(
-                  "transition-transform duration-300",
-                  hoveredProject === project.id ? "translate-x-0" : "-translate-x-4 opacity-0"
-                )}>
+                <div
+                  className={cn(
+                    "transition-transform duration-300",
+                    hoveredProject === project.id
+                      ? "translate-x-0"
+                      : "-translate-x-4 opacity-0"
+                  )}
+                >
                   <ArrowRight size={24} />
                 </div>
               </div>
@@ -94,5 +109,5 @@ export function WorkSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
