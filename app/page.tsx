@@ -7,7 +7,6 @@ import { NewsSection } from "@/components/news-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
 import OurWhy from "@/components/OurWhy";
-import InteractiveMap from "@/components/InteractiveMap";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <OurWhy />
       <AboutSection />
       <NewsSection />
-      <InteractiveMap />
       <ContactSection />
       <Footer />
     </main>
