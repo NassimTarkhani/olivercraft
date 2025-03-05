@@ -129,7 +129,7 @@ export function ExpertiseSection() {
                     expandedItem === area.id ? "block" : "hidden" // Remove animation
                   )}
                 >
-                  <div className="p-6 bg-white/90">
+                  <div className="p-6 bg-white/90 rounded-lg mt-2">
                     <p className="text-gray-700 mb-6">{area.description}</p>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {area.items.map((item, index) => (
