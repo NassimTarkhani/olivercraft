@@ -32,42 +32,64 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-white">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="contact" className="relative py-20 md:py-32 bg-black">
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source
+          src="/videobackground.mp4" // Replace with your video URL
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/70"></div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white">
               Get in Touch
             </h2>
-            <p className="text-lg text-gray-700 mb-12 max-w-md">
-              Interested in working with us? We'd love to hear from you. Fill
+            <p className="text-lg text-gray-300 mb-12 max-w-md">
+              Interested in working with us? We`d love to hear from you. Fill
               out the form or contact us directly.
             </p>
 
             <div className="space-y-8">
               <div className="flex items-start">
-                <MapPin size={24} className="mr-4 mt-1" />
+                <MapPin size={24} className="mr-4 mt-1 text-white" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Our Offices</h3>
-                  <p className="text-gray-600">Paris • New York • Shanghai</p>
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    Our Offices
+                  </h3>
+                  <p className="text-gray-300">Paris • New York • Shanghai</p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <Mail size={24} className="mr-4 mt-1" />
+                <Mail size={24} className="mr-4 mt-1 text-white" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 font-didot">
+                  <h3 className="text-xl font-semibold mb-2 font-didot text-white">
                     Email Us
                   </h3>
-                  <p className="text-gray-600">contact@OLIVER CRAFT.com</p>
+                  <p className="text-gray-300">contact@OLIVER CRAFT.com</p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <Phone size={24} className="mr-4 mt-1" />
+                <Phone size={24} className="mr-4 mt-1 text-white" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-                  <p className="text-gray-600">+33 1 23 45 67 89</p>
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    Call Us
+                  </h3>
+                  <p className="text-gray-300">+33 1 23 45 67 89</p>
                 </div>
               </div>
             </div>
@@ -78,7 +100,7 @@ export function ContactSection() {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-gray-300 mb-1"
                 >
                   Name
                 </label>
@@ -89,14 +111,14 @@ export function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-600 bg-transparent text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-gray-300 mb-1"
                 >
                   Email
                 </label>
@@ -107,14 +129,14 @@ export function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-600 bg-transparent text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="company"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-gray-300 mb-1"
                 >
                   Company
                 </label>
@@ -124,14 +146,14 @@ export function ContactSection() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-600 bg-transparent text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-gray-300 mb-1"
                 >
                   Message
                 </label>
@@ -142,13 +164,13 @@ export function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-600 bg-transparent text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
                 />
               </div>
 
               <button
                 type="submit"
-                className="inline-flex items-center justify-center px-8 py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-3 bg-white text-black font-medium hover:bg-gray-200 transition-colors"
               >
                 Send Message <ArrowRight size={18} className="ml-2" />
               </button>

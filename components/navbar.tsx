@@ -26,20 +26,24 @@ export function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        scrolled ? "bg-black/60 backdrop-blur-sm shadow-sm" : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center space-x-3">
-            <img src="/LOGOBLACK.png" className="w-10 h-10" alt="Logo" />
+            <img
+              src="/logo white.png"
+              className="w-10 h-10 text-white"
+              alt="Logo"
+            />
             <Link href="/" className="text-2xl font-bold tracking-tighter">
-              <img src="typob.png" className="w-15 h-5" alt="" />
+              <img src="whitetypo.png" className="w-15 h-5" alt="" />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 text-white">
             <Link
               href="#work"
               className="text-sm uppercase tracking-wider hover:text-primary/80 transition-colors"

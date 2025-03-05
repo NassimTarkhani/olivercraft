@@ -9,9 +9,9 @@ const projects = [
   {
     id: 1,
     title: "Luxury Fashion Brand",
-    category: "E-commerce",
+    category: "BRANDING",
     image:
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      "https://images.unsplash.com/photo-1636247499734-893da2bcfc1c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "Complete digital transformation for a luxury fashion house, including e-commerce platform and digital marketing strategy.",
   },
@@ -35,10 +35,10 @@ const projects = [
   },
   {
     id: 4,
-    title: "Hospitality Group",
-    category: "Website Redesign",
+    title: "Video Making",
+    category: "Post Production",
     image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "https://images.unsplash.com/photo-1619286463995-8a38630a5efd?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "Complete website redesign for a luxury hospitality group, focusing on user experience and conversion optimization.",
   },
