@@ -8,10 +8,9 @@ import { cn } from "@/lib/utils";
 const projects = [
   {
     id: 1,
-    title: "Luxury Fashion Brand",
-    category: "BRANDING",
-    image:
-      "https://images.unsplash.com/photo-1636247499734-893da2bcfc1c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "LANCOME",
+    category: "Shooting",
+    image: "/lancome.png",
     description:
       "Complete digital transformation for a luxury fashion house, including e-commerce platform and digital marketing strategy.",
   },
@@ -27,18 +26,16 @@ const projects = [
   {
     id: 3,
     title: "Fine Jewelry",
-    category: "Digital Campaign",
-    image:
-      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    category: "HUBLOT",
+    image: "/hublot.png",
     description:
       "Award-winning digital campaign for a fine jewelry brand, resulting in significant brand awareness and sales growth.",
   },
   {
     id: 4,
-    title: "Video Making",
-    category: "Post Production",
-    image:
-      "https://images.unsplash.com/photo-1619286463995-8a38630a5efd?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "ISSEY MIYAKE",
+    category: "Product Shooting",
+    image: "/parfum.png",
     description:
       "Complete website redesign for a luxury hospitality group, focusing on user experience and conversion optimization.",
   },
@@ -51,13 +48,27 @@ export function WorkSection() {
     <section id="work" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-start mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-0">
-            Selected Work
+          <h2 className="text-8xl md:text-6xl lg:text-8xl font-bold text-cyan-600 mb-6 md:mb-0 italic font-didot">
+            NOTRE <br /> VISION
           </h2>
-          <p className="text-lg md:text-3xl max-w-md text-gray-600 font-didot">
-            WE CREATE DIGITAL EXPERIENCES THAT ELEVATE LUXURY AND PREMIUM BRANDS
-            TO NEW HEIGHTS.
-          </p>
+          <div className="flex flex-row items-start space-x-8 pb-4">
+            <ul className="text-lg md:text-3xl text-gray-600 font-didot uppercase list-none">
+              <li className="whitespace-nowrap text-xl ">
+                Accompagner les Institutions Culturelles et les aider à se
+                fortifier en tant que marque
+              </li>
+              <div className="mb-4"></div>
+              <li className="whitespace-nowrap text-xl">
+                Renforcer un dialogue authentique et créatif avec les
+                communautés.
+              </li>
+              <div className="mb-4"></div>
+              <li className="whitespace-nowrap text-xl">
+                Personnaliser le storytelling des Institutions Culturelles afin
+                de rester distinctif.
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">

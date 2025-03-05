@@ -82,7 +82,11 @@ export function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? (
+              <X size={24} className="text-red-700" />
+            ) : (
+              <Menu size={24} className="text-white" />
+            )}
           </button>
         </div>
       </div>

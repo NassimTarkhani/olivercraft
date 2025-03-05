@@ -71,21 +71,30 @@ export function AboutSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-didot">
-              About OLIVER CRAFT
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold  font-didot text-cyan-600">
+              Nous
             </h2>
-            <p className="text-lg text-gray-700 mb-6">
-              Founded in XXXX, OLIVER CRAFT is a digital agency specializing in
-              creating exceptional digital experiences for luxury and premium
-              brands. Our team combines strategic thinking, creative excellence,
-              and technical expertise to deliver solutions that elevate brands
-              in the digital landscape.
+            <h2 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-8 font-didot italic text-cyan-600  ">
+              Sommes
+            </h2>
+            <p className="text-lg text-gray-700 mb-4">
+              Une Agence de Création et de Production experte en Luxe, Art et
+              Culture. Nous savons imaginer, concevoir et produire TOUS les
+              types de contenus pour les Institutions Culturelles, Musées,
+              Fondations et Galeries en plus de notre expertise Luxe auprès des
+              Maisons. Nos contenus film, print ou animation sont réalisés sur
+              mesure avec les meilleurs standards, pour une utilisation
+              digitale, publicitaire, social medias, ou événementielle.
             </p>
-            <p className="text-lg text-gray-700 mb-8">
-              With offices in Paris, New York, and Shanghai, we work with global
-              clients across fashion, beauty, hospitality, and automotive
-              industries. Our approach is collaborative, innovative, and focused
-              on delivering measurable results.
+            <p className="text-lg text-gray-700 mb-6">
+              Ce qui nous différencie? Nous aimons passionnément les artistes et
+              leurs émotions, leur vision du monde, leur message et leur
+              personnalité qui nous inspirent une vision créative, juste et
+              engagée. Nous savons restituer leur sensibilité, leurs
+              jaillissements, leurs partis-pris et leurs revendications en
+              délivrant une signature émotionnelle. Nos productions font l’objet
+              d’une exécution craftée, d’une pédagogie claire et d’une
+              compréhension fidèle au travail de l’auteur.
             </p>
             <button className="inline-flex items-center text-lg font-medium border-b-2 border-black pb-1 hover:pb-2 transition-all">
               Learn more about us <ArrowRight size={18} className="ml-2" />
@@ -94,7 +103,7 @@ export function AboutSection() {
           <div className="relative">
             <div className="aspect-[4/5] relative">
               <Image
-                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                src="/somme.png"
                 alt="OLIVER CRAFT team"
                 fill
                 className="object-cover"

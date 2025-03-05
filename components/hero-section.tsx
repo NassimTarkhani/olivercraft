@@ -62,7 +62,7 @@ export function HeroSection() {
           <div className="relative z-20 h-full flex flex-col justify-center items-center text-white text-center px-4">
             <h1
               className={cn(
-                "text-4xl md:text-6xl lg:text-7xl font-bold mb-4 transition-all duration-700 font-didot",
+                "text-4xl md:text-6xl lg:text-9xl font-bold mb-4 transition-all duration-700 font-didot italic text-cyan-200",
                 isAnimating
                   ? "opacity-0 translate-y-10"
                   : "opacity-100 translate-y-0 "
